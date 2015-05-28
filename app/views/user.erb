@@ -1,10 +1,12 @@
 <div class="container">
-  <%= byebug %>
   <h1>Welcome <%= @user.name%></h1>
 
   <p>Your email is: <%= @user.email %></p>
   <p>Your password is: <%= @user.password %></p>
-  <a href="/">Logout</a>
+  <form action="/logout" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <button type="submit">Logout</button>
+  </form>
   <br/>
   <br/>
   <a href="" action="delete_user" method="delete">Delete this account</a>

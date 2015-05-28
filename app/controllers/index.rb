@@ -46,3 +46,8 @@ get '/secret_page' do
     erb :user
   end
 end
+
+delete '/logout' do
+  session[:user_id] = nil
+  redirect to "/"
+end
