@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Welcome!</h1>
+
+  <a href="/create_user">Create new user</a>
+  <br/><br/>
+  Please log in!
+
+  <form action="/login" method="post">
+  <p>Email</p><input type="text" name="post[email]">
+  <p>Password</p><input type="text" name="post[password]">
+  <br/><br/>
+  <input type="submit" value="Login">
+</form>
+<br/>
+<p>All users:</p>
+<p><% @all_users.each do |user|%></p>
+      <p><%= user.email %></p>
+  <% end %>
+<%= params %>
+</div>
+
